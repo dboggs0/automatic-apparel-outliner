@@ -31,7 +31,6 @@ def upload_file():
     if allowed_file(original_filename):
         file_info = save_upload(image, filename)
         img_data = img_process(file_info[0])
-        img_data=''
         pro_img = save_processed(img_data, file_info[1])
         imgOriginal = get_original(serial_id)
 
