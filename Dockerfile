@@ -29,7 +29,7 @@ COPY . .
 RUN for req in $(cat ./requirements.txt) pydot; do pip3 install $req; done
 # Get the model
 RUN mkdir ./app/process/segnet/models
-RUN wget https://github.com/sloanlipman/Look-Into-Person/releases/download/v1.1/model.11-0.8409.hdf5 && mv model.11-0.8409.hdf5 ./app/process/segnet/models/
+RUN wget https://github.com/sloanlipman/Look-Into-Person/releases/download/v2.0/model.11-0.8409.hdf5 && mv model.11-0.8409.hdf5 ./app/process/segnet/models/
 
 # Build the Angular project
 WORKDIR /usr/src/app/automatic-apparel-outliner/web
